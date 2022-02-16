@@ -24,7 +24,7 @@ module.exports.HTTPEntity = class HTTPEntity {
     let headers = "";
     const arr = data.replace(/[']/g, "").split(" ");
     const start = arr.findIndex((e) => e === "-h");
-    let end = arr.findIndex((e) => e === "-d");
+    let end = arr.findIndex((e) =>  e.includes('-d'));
     if (end === -1) {
       end = arr.findIndex((e) => e === "-f");
     }
@@ -47,7 +47,7 @@ module.exports.HTTPEntity = class HTTPEntity {
   checkInlineData = (data) => {
     let inlineData = "";
     const arr = data.replace(/[']/g, "").split(" ");
-    let start = arr.findIndex((e) => e === "-d");
+    let start = arr.findIndex((e) => e.includes('-d'));
     let end = arr.length - 1;
     if (start === -1) {
       return inlineData;

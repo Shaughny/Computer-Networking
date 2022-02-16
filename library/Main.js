@@ -24,7 +24,7 @@ module.exports.app = class Application {
       let data = buf.toString("utf-8");
       let paragraphs = data.split(/\n\s*\n/);
       const nonVerboseData = paragraphs[1];
-
+      console.log("----------SERVER RESPONSE----------:\n");
       if (request.verbose === true) {
         console.log(data);
       }else{
