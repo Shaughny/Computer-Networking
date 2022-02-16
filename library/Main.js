@@ -22,15 +22,15 @@ module.exports.app = class Application {
 
     this.Client.socket.on("data", (buf) => {
       let data = buf.toString("utf-8");
-      console.log("--------SERVER RESPONSE--------:\n");
-      const end = data.indexOf("{");
-      const verboseData = data.substring(0, end);
-      const nonVerboseData = data.substring(end);
+      let paragraphs = data.split(/\n\s*\n/);
+      const nonVerboseData = paragraphs[1];
 
-      if (this.request.verbose === true) {
-        console.log(verboseData);
+      if (request.verbose === true) {
+        console.log(data);
+      }else{
+          console.log(nonVerboseData);
       }
-      console.log(nonVerboseData);
+     
     });
   };
 };

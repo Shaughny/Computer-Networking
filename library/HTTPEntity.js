@@ -9,6 +9,7 @@ module.exports.HTTPEntity = class HTTPEntity {
     this.fileData = this.checkFile(data);
     this.url = this.getURL(data);
     this.validURL = this.url.includes("http");
+    this.oneDataSelected = this.checkOneData(data);
   }
 
   findType = (data) => {
@@ -58,7 +59,7 @@ module.exports.HTTPEntity = class HTTPEntity {
     }
     return inlineData;
   };
-  checkFile = (data) => {
+  checkFile = async (data) => {
     let fileData = "";
     const arr = data.replace(/[']/g, "").split(" ");
     let inline = arr.findIndex((e) => e === "-d");
@@ -70,7 +71,7 @@ module.exports.HTTPEntity = class HTTPEntity {
       return fileData;
     }
     fs.readFile(arr[start + 1], "utf-8", (err, data) => {
-      fileData = data;
+      this.inlineData =  data;
     });
     return fileData;
   };
@@ -78,4 +79,15 @@ module.exports.HTTPEntity = class HTTPEntity {
     const arr = data.replace(/[']/g, "").split(" ");
     return arr[arr.length - 1];
   };
+  checkOneData = (data) => {
+    const arr = data.replace(/[']/g, "").split(" ");
+    let checkD = arr.findIndex(e=>e==='-d');
+    let checkF = arr.findIndex(e=>e==='-f');
+
+    if(checkD > -1 && checkF > -1){
+        return false;
+    }
+    return true;
+  }
+  
 };

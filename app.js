@@ -13,6 +13,10 @@ const data = input.slice(2);
 
 const sendRequest = () => {
   const request = new RequestData(data.join(" "));
+  if(!request.oneDataSelected){
+      console.log("\nINVALID QUERY: Only one option of [-d] or [-f] can be used in a request\n");
+      return;
+  }
   const app = new App(request);
   app.run();
 };
