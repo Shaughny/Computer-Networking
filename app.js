@@ -43,6 +43,6 @@ switch (data[0].toLowerCase()) {
     sendRequest();
     break;
   default:
-    console.log("\nCommand not Found\n");
+    console.log("\nCommand not Found:\t Try 'httpc help' for all options\n");
     break;
 }
