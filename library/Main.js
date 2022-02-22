@@ -20,7 +20,7 @@ module.exports.app = class Application {
       );
     });
 
-    this.Client.socket.on("data", (buf) => {
+    this.Client.socket.once("data", (buf) => {
       let data = buf.toString("utf-8");
       let paragraphs = data.split(/\n\s*\n/);
       const nonVerboseData = paragraphs[1];
