@@ -1,20 +1,30 @@
+# cUrl-like program for making GET and POST Requests
+
+
+
 # Requirements
 
 1. You need install node 4.2.1 or later
 2. Run `npm install` to install dependencies
 
-# Run echo server
+# Usage
 
-`node echoserver.js --port 8007`
+`npm run httpc <query>`
 
-# Run echo client
+## Examples: 
 
-`node echoclient.js --host localhost --port 8007`
+### HELP:
 
-# Run time server
+`npm run httpc help`
 
-`node timeserver.js --host 8037`
+`npm run httpc help get`
 
-# Run time client
+`npm run httpc help post`
 
-`node timeclient.js --host localhost --port 8037`
+### GET: 
+
+`npm run httpc get 'http://httpbin.org/get?name=Mark&country=Canada'`
+
+### POST:
+
+`npm run httpc post -h Content-Type:application/json -d '{"Name": Mark}' http://httpbin.org/post`

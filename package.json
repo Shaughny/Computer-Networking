@@ -1,12 +1,13 @@
 {
-  "name": "network-examples",
+  "name": "networking",
   "version": "1.0.0",
-  "description": "Networking examples for COMP-445",
+  "description": "Networking Cases",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "httpc": "node app.js"
   },
   "repository": {},
-  "author": "ENCS",
+  "author": "Mark O'Shaughnessy",
   "license": "MIT",
   "bin": {
     "httpc": "app.js"
