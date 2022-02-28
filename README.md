@@ -1,4 +1,4 @@
-# cUrl-like program for making GET and POST Requests
+# cURL-like program for making GET and POST Requests
 
 
 
