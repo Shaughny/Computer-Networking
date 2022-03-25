@@ -2,7 +2,6 @@
 "use strict";
 
 const net = require("net");
-const yargs = require("yargs");
 const fs = require("fs");
 const Server = require("../server-library/Server").Server;
 
