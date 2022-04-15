@@ -2,8 +2,9 @@
 
 Networking Project to simulate TCP and UDP protocols in a client/server model.
 
-Makes use of custom libraries written to allow for UDP and TCP requests for a remote file managing system. 
+Includes custom libraries that allow for UDP and TCP requests.
 
+Uses the custom libraries to create a remote file system manager. 
 
 Written in Nodejs, Python and Go
 

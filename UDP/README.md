@@ -34,7 +34,7 @@
 
 **POST:**
 
-    python3 Main.py httpc POST -d "{Message}" 'http://localhost:{PORT}/{Filename/Directory}/'
+    python3 Main.py httpc POST -d "{Message}" 'http://localhost:{PORT}/{Filename.extension/Directory}/'
     python3 Main.py httpc POST -f  {Filename.extension} 'http://localhost:{PORT}/{Filename.extension/Directory}/'
 
 ### Server
