@@ -1,12 +1,12 @@
 # UDP Client and Server File Manager
 
-    Remote file system using a UPD Client and Server that allows for simple GET and POST requests using the Packet class.
+   Remote file system using a UPD Client and Server that allows for simple GET and POST requests using the Packet class.
 
-    The Client and Server interact through the custom Router that will route the packets between them and also simulate packet loss/delay.
+   The Client and Server interact through the custom Router that will route the packets between them and also simulate packet loss/delay.
 
-    The Packet class determines a max packet size of 1014 bytes in total. 
+   The Packet class determines a max packet size of 1014 bytes in total. 
     
-    The Remote file system uses a custom UDP library to allow for guaranteed delivery of packets and data integrity. 
+   The Remote file system uses a custom UDP library to allow for guaranteed delivery of packets and data integrity. 
     
 ## Usage Examples:
 
