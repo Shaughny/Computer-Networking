@@ -1,6 +1,6 @@
 # UDP Client and Server File Manager
 
-   Remote file system using a UPD Client and Server that allows for simple GET and POST requests using the Packet class.
+   Remote file system using a UDP Client and Server that allows for simple GET and POST requests using the Packet class.
 
    The Client and Server interact through the custom Router that will route the packets between them and also simulate packet loss/delay.
 
