@@ -10,4 +10,3 @@ Run `./router --help` for the usage.
  - Install Go (1.7 or later)
  - Run `go build router.go`
 
-If you found any issue, please report. Thank you.
